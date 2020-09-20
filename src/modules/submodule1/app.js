@@ -1,13 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './app.css';
 import Loading from '@comp/Loading';
-
-
-function App() {
+import { initSession } from '@src/redux/actions';
+import { connect } from 'react-redux';
+function App(props) {
+	useEffect(()=>{
+		const useInfo = {
+			userId: 'userId',
+			userName: 'userName'
+		};
+		// eslint-disable-next-line react/prop-types
+		props.init(useInfo);
+	},[]);
+	useEffect(()=>{
+		// console.log({props});
+	},[props]);
 	return (
 		<div className='App'>
 			<Loading />
+			<p>{props.userInfo.userId}</p>
 			<header className="App-header">
 				<img src={logo} className="App-logo" alt="logo" />
 				<p>
@@ -28,5 +40,13 @@ function App() {
 		</div>
 	);
 }
+const mapStateToProps = state => {
+	return state;
+};
+const mapDispatchToProps = (dispatch) => {
+	return {
+		init: (...args) => dispatch(initSession(...args)),
+	};
+};
 
-export default App;
+export default connect(mapStateToProps, mapDispatchToProps)(App);

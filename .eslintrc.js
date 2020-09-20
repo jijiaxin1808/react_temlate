@@ -34,6 +34,7 @@ module.exports =  {
 			'error',
 			'always'
 		],
-		'no-undef': 0 // off
+		'no-undef': 0, // off
+		'react/prop-types': 0, // off
 	}
 };

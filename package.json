@@ -9,13 +9,13 @@
     "@types/jest": "^24.0.0",
     "@types/node": "^12.0.0",
     "@types/react-dom": "^16.9.0",
+    "create-react-app": "^3.4.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3",
     "typescript": "~3.7.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-app-rewired start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -24,8 +24,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "husky": {
-  },
+  "husky": {},
   "browserslist": {
     "production": [
       ">0.2%",
@@ -46,6 +45,9 @@
     "eslint-plugin-react": "^7.20.6",
     "husky": "^4.3.0",
     "lint-staged": "^10.4.0",
+    "react-app-rewired": "^2.1.6",
+    "react-dev-utils": "^10.2.1",
+    "react-scripts": "^3.4.3",
     "stylelint": "^13.7.1",
     "stylelint-config-standard": "^20.0.0"
   },

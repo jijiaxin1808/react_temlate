@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import store from './redux/store';
 import {  BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import App2 from '@src/modules/submodule2';
-
+import Oauth from '@src/modules/oauth';
 ReactDOM.render(
 	<React.StrictMode>
 		<Provider store={store}>
@@ -14,6 +14,7 @@ ReactDOM.render(
 				<div>
 					<nav>
 						<ul>
+							<Oauth />
 							<li>
 								<Link to="/">Home</Link>
 							</li>
@@ -26,8 +27,6 @@ ReactDOM.render(
 						</ul>
 					</nav>
 
-					{/* A <Switch> looks through its children <Route>s and
-				renders the first one that matches the current URL. */}
 					<Switch>
 						<Route path="/about">
 							<App/>

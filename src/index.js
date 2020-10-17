@@ -5,6 +5,7 @@ import store from './redux/store';
 import {  BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import App2 from '@src/modules/submodule2';
 import Oauth from '@src/modules/oauth';
+import './common.less';
 ReactDOM.render(
 	<React.StrictMode>
 		<Provider store={store}>

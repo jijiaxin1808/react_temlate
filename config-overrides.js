@@ -1,14 +1,8 @@
 // /* config-overrides.js */
 const resolve = dir => require('path').resolve(__dirname, dir);
-const { override, fixBabelImports, addLessLoader, addWebpackAlias } = require('customize-cra');
+const { override, addLessLoader, addWebpackAlias } = require('customize-cra');
 
 module.exports = override(
-	// antd
-	fixBabelImports('import', {
-		libraryName: 'antd',
-		libraryDirectory: 'es',
-		style: true,
-	}),
 	// 这里配置less
 	addLessLoader({
 		strictMath: true,
